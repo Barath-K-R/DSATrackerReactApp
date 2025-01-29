@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { refreshAccessToken } from './authApi.js';
 
+
+const baseUrl=process.env.REACT_APP_NODE_ENV==='development'?process.env.REACT_APP_LOCAL_BASE_URL:process.env.REACT_APP_SERVER_BASE_URL;
 const problemApi = axios.create({
-  baseURL: 'http://localhost:5000/api/problems',
+  baseURL:`${baseUrl}/problems`,
   headers: {
     'Content-Type': 'application/json',
   },
