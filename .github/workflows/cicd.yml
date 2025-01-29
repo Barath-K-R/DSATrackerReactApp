@@ -28,4 +28,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f dsatracker-react-container
       - name: Run Docker Container
-         run: docker run -d -p 3000:80 --name dsatracker-react-container -e REACT_APP_SERVER_BASE_URL='${{ secrets.REACT_APP_SERVER_BASE_URL }}' barathravichandran/dsatrackerreactapp
+        run: docker run -d -p 3000:80 --name dsatracker-react-container -e REACT_APP_SERVER_BASE_URL='${{ secrets.REACT_APP_SERVER_BASE_URL }}' barathravichandran/dsatrackerreactapp
